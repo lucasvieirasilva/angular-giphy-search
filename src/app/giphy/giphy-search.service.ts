@@ -11,7 +11,11 @@ export class GiphySearchService {
   }
 
   pesquisarGiphy(limit: string, term: string): Observable<Object> {
-    const url = "https://api.giphy.com/v1/gifs/search?q=" + term + "&api_key=" + this.API_KEY + "&limit=" + limit;
+    const url = this.getUrl(limit, term);
     return this.httpClient.get(url);
+  }
+
+  getUrl(limit: string, term: string): string {
+    return 'https://api.giphy.com/v1/gifs/search?q=' + term + '&api_key=' + this.API_KEY + '&limit=' + limit;
   }
 }

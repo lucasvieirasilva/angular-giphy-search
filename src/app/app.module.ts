@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { GiphySearchManualModule } from './giphy/giphy-search-manual/giphy-search-manual.module';
 import {HttpClientModule} from "@angular/common/http";
 import {AppRoutingModule} from "./app-routing.module";
+import {ContatoModule} from "./contato/contato.module";
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import {AppRoutingModule} from "./app-routing.module";
   ],
   imports: [
     GiphySearchManualModule,
+    ContatoModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserModule
